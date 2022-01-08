@@ -1,6 +1,6 @@
 # Social Media App (In-Progress!!)
 
-This is the frontend of the full stack Social Media App that I'm workin on.
+This is the frontend of the full stack Social Media App that I'm working on.
 Its a work-in-progess project.
 
 ## Technology Stack Used
