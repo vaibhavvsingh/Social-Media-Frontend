@@ -1,0 +1,46 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.Signup {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* width: 20%; */
+  text-align: left;
+  /* justify-content: center; */
+}
+input {
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px 0px;
+  border-radius: 3px;
+  border: 1px solid rgb(187, 187, 187);
+}
+input:focus {
+  border: 1px solid grey;
+  outline: none;
+}
+h1 {
+  text-align: center;
+}
+.loginpage {
+  display: flex;
+}
+.btn {
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px 0px;
+  border-radius: 3px;
+  background-color: deepskyblue;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.link {
+  text-decoration: none;
+  color: deepskyblue;
+}

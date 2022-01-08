@@ -1,0 +1,25 @@
+.story {
+  margin-top: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.profile {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* background-color: cadetblue; */
+  /* padding: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+  border: 1px solid black;
+}
+.storyname {
+  text-align: center;
+  font-size: 10px;
+}
