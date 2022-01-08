@@ -1,22 +1,37 @@
 import React from "react";
+import HomeIcon from "@mui/icons-material/Home";
+import SearchIcon from "@mui/icons-material/Search";
+import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 
 function BottomNav() {
   return (
     <div className="bottomnav">
       <div>
-        <b>Home</b>
+        <b>
+          <HomeIcon />
+        </b>
       </div>
       <div>
-        <b>Browse</b>
+        <b>
+          <SearchIcon />
+        </b>
       </div>
       <div>
-        <b>Post</b>
+        <b>
+          <AddBoxOutlinedIcon />
+        </b>
       </div>
       <div>
-        <b>Activity</b>
+        <b>
+          <FavoriteBorderOutlinedIcon />
+        </b>
       </div>
       <div>
-        <b>Profile</b>
+        <b>
+          <AccountCircleOutlinedIcon />
+        </b>
       </div>
     </div>
   );

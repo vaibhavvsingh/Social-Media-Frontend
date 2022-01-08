@@ -1,3 +1,27 @@
 .feedpost {
   border-bottom: 1px solid black;
 }
+#postimage {
+  width: 100%;
+}
+.button {
+  padding: 5px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.comments {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.caption {
+  margin-left: 5px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}

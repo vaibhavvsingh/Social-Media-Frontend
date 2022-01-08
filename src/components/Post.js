@@ -1,16 +1,49 @@
 import React from "react";
 import "./Post.css";
+import post from "../img/post.jpg";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 function Post() {
   return (
     <div className="feedpost">
-      <div>
+      <div className="title">
         <div>pic title</div>
-        <div>...</div>
+        <div>
+          <MoreHorizIcon />
+        </div>
       </div>
-      <div>image</div>
-      <h1>buttons</h1>
-      <h1>comment</h1>
+      <div>
+        <img id="postimage" src={post} alt="" />
+      </div>
+      <div className="buttons">
+        <div>
+          <FavoriteBorderOutlinedIcon className="button" />
+          <ChatBubbleOutlineOutlinedIcon className="button" />
+          <ShareOutlinedIcon className="button" />
+        </div>
+        <div>
+          <BookmarkBorderOutlinedIcon className="button save" />
+        </div>
+      </div>
+      <div className="caption">caption</div>
+      <div className="comments">
+        <div>
+          <b>username</b> comment
+        </div>
+        <div>
+          <b>username</b> comment
+        </div>
+        <div>
+          <b>username</b> comment
+        </div>
+        <div>
+          <b>username</b> comment
+        </div>
+      </div>
     </div>
   );
 }
