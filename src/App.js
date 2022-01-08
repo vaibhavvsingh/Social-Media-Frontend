@@ -4,22 +4,34 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { useState } from "react";
 import User from "./components/User";
+import UserContext from "./Context";
+import React from "react";
 
 function App() {
-  const [isLoggedIn, setLoggedIn] = useState(true);
-  // setLoggedIn(true);
+  const [user, setUser] = useState({
+    name: "",
+    username: "",
+    password: "",
+    email: "",
+    isLoggedIn: false,
+  });
+
   let element;
-  if (isLoggedIn) {
+  if (user.isLoggedIn) {
     element = <User />;
   } else {
     element = <Login />;
   }
+  // console.log(user);
+
   return (
     <div>
-      <Routes>
-        <Route path="/" element={element} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+      <UserContext.Provider value={{ user, setUser }}>
+        <Routes>
+          <Route path="/" element={element} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </UserContext.Provider>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 .feedpost {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
+  /* max-width: 700px;
+  margin: auto; */
 }
 #postimage {
   width: 100%;

@@ -6,7 +6,7 @@ import TopNav from "./TopNav";
 
 function User() {
   return (
-    <div>
+    <div className="feed">
       <TopNav />
       <Stories />
       <Posts />

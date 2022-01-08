@@ -2,12 +2,12 @@ import React from "react";
 import "./Stories.css";
 
 function Stories() {
-  const people = [1, 2, 3, 4, 5, 6, 7, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7];
+  const people = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   return (
     <div className="story">
       {people.map((person) => {
         return (
-          <div>
+          <div key={people.indexOf(person)}>
             <div className="profile">{person}</div>
             <div className="storyname">{person}</div>
           </div>
