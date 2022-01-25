@@ -1,5 +1,4 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { useState } from "react";
@@ -16,20 +15,26 @@ function App() {
     isLoggedIn: false,
   });
 
-  let element;
-  if (user.isLoggedIn) {
-    element = <User />;
-  } else {
-    element = <Login />;
-  }
   // console.log(user);
 
   return (
     <div>
       <UserContext.Provider value={{ user, setUser }}>
         <Routes>
-          <Route path="/" element={element} />
-          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/"
+            element={
+              !user.isLoggedIn ? <Navigate replace to="/login" /> : <User />
+            }
+          />
+          <Route
+            path="/login"
+            element={user.isLoggedIn ? <Navigate replace to="/" /> : <Login />}
+          />
+          <Route
+            path="/signup"
+            element={user.isLoggedIn ? <Navigate replace to="/" /> : <Signup />}
+          />
         </Routes>
       </UserContext.Provider>
     </div>

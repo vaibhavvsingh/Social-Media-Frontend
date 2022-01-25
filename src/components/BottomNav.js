@@ -2,33 +2,31 @@ import React from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 
 function BottomNav() {
+  const handleClick = () => {
+    console.log("Hello World");
+  };
+
   return (
     <div className="bottomnav">
-      <div>
+      <div onClick={handleClick}>
         <b>
           <HomeIcon />
         </b>
       </div>
-      <div>
+      <div onClick={handleClick}>
         <b>
           <SearchIcon />
         </b>
       </div>
-      <div>
+      <div onClick={handleClick}>
         <b>
           <AddBoxOutlinedIcon />
         </b>
       </div>
-      <div>
-        <b>
-          <FavoriteBorderOutlinedIcon />
-        </b>
-      </div>
-      <div>
+      <div onClick={handleClick}>
         <b>
           <AccountCircleOutlinedIcon />
         </b>

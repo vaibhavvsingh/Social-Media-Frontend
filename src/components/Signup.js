@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import "./Signup.css";
+import "../css/Signup.css";
 import UserContext from "../Context";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Signup() {
   const { user, setUser } = useContext(UserContext);
@@ -19,13 +20,28 @@ function Signup() {
     setUser({ ...user, password: event.target.value });
   };
   const handleClick = () => {
-    setUser({ ...user, isLoggedIn: !user.isLoggedIn });
+    axios({
+      method: "POST",
+      url: "https://imagepost-backend.herokuapp.com/auth/signup",
+      data: {
+        username: user.username,
+        password: user.password,
+        email: user.email,
+        name: user.name,
+      },
+    })
+      .then(() => {
+        setUser({ ...user, isLoggedIn: !user.isLoggedIn });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
     <div className="App">
       <div className="Signup">
-        <h1>Instagram</h1>
+        <h1>ImagePost</h1>
         <input
           placeholder="Email"
           id="email"

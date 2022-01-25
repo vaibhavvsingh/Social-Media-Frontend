@@ -1,5 +1,5 @@
 import React from "react";
-import "./Post.css";
+import "../css/Post.css";
 import post from "../img/post.jpg";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";

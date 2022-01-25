@@ -4,14 +4,16 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: white;
 }
 .Signup {
   margin: auto;
   display: flex;
   flex-direction: column;
-  /* width: 20%; */
   text-align: left;
-  /* justify-content: center; */
+  background-color: rgb(235, 233, 233);
+  padding: 30px;
+  border-radius: 15px;
 }
 input {
   font-size: 15px;
