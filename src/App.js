@@ -15,8 +15,6 @@ function App() {
     isLoggedIn: false,
   });
 
-  // console.log(user);
-
   return (
     <div>
       <UserContext.Provider value={{ user, setUser }}>

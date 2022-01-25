@@ -32,10 +32,17 @@ function Signup() {
     })
       .then(() => {
         setUser({ ...user, isLoggedIn: !user.isLoggedIn });
+        window.localStorage.setItem("user", JSON.stringify(user));
       })
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
   };
 
   return (
@@ -49,6 +56,7 @@ function Signup() {
           required
           value={user.email}
           onChange={handleEmailChange}
+          onKeyDown={handleKeyDown}
         />
         <input
           placeholder="Full Name"
@@ -57,6 +65,7 @@ function Signup() {
           required
           value={user.name}
           onChange={handleNameChange}
+          onKeyDown={handleKeyDown}
         />
         <input
           placeholder="Username"
@@ -65,6 +74,7 @@ function Signup() {
           required
           value={user.username}
           onChange={handleUsernameChange}
+          onKeyDown={handleKeyDown}
         />
         <input
           placeholder="Password"
@@ -73,6 +83,7 @@ function Signup() {
           required
           value={user.password}
           onChange={handlePasswordChange}
+          onKeyDown={handleKeyDown}
         />
         <button className="btn" onClick={handleClick}>
           Sign Up{" "}

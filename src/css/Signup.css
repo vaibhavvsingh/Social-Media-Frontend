@@ -42,6 +42,9 @@ h1 {
   color: white;
   font-weight: 600;
 }
+.btn:hover {
+  cursor: pointer;
+}
 .link {
   text-decoration: none;
   color: deepskyblue;
