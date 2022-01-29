@@ -32,28 +32,28 @@ function Login() {
   };
 
   const handleDemoLogin = async () => {
-    setUser({
-      username: "demo-account",
-      password: "abcdefg",
-      email: "",
-      name: "",
-      isLoggedIn: user.isLoggedIn,
-    });
     axios({
       method: "POST",
       url: "https://imagepost-backend.herokuapp.com/auth/login",
       data: {
-        username: "demo-account",
-        password: "abcdefg",
+        username: "demo",
+        password: "demo",
       },
     })
       .then((res) => {
-        setUser({ ...user, isLoggedIn: true });
+        setUser({
+          username: "demo",
+          password: "demo",
+          email: "",
+          name: "",
+          isLoggedIn: true,
+        });
+        // setUser({ ...user, isLoggedIn: true });
         window.localStorage.setItem(
           "user",
           JSON.stringify({
-            username: "demo-account",
-            password: "abcdefg",
+            username: "demo",
+            password: "demo",
             email: "",
             name: "",
             isLoggedIn: user.isLoggedIn,
@@ -73,7 +73,7 @@ function Login() {
   useEffect(() => {
     if (window.localStorage.getItem("user")) {
       const info = JSON.parse(window.localStorage.getItem("user"));
-      setUser(info);
+
       axios({
         method: "POST",
         url: "https://imagepost-backend.herokuapp.com/auth/login",
@@ -83,6 +83,7 @@ function Login() {
         },
       })
         .then((res) => {
+          setUser(info);
           setUser({ ...user, isLoggedIn: true });
           window.localStorage.setItem("user", JSON.stringify(info));
         })

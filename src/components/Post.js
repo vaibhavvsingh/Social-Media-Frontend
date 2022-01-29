@@ -7,7 +7,7 @@ import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
-function Post() {
+function Post(props) {
   return (
     <div className="feedpost">
       <div className="title">
