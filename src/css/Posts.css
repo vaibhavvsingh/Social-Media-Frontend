@@ -10,6 +10,11 @@
   flex-direction: column;
   position: fixed;
 }
+.sidebar_links {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(40, 116, 240);
+}
 .sidebar div {
   padding: 10px;
 }

@@ -83,14 +83,20 @@ function Login() {
         },
       })
         .then((res) => {
-          setUser(info);
-          setUser({ ...user, isLoggedIn: true });
+          setUser({
+            username: info.username,
+            password: info.password,
+            email: "",
+            name: "",
+            isLoggedIn: true,
+          });
           window.localStorage.setItem("user", JSON.stringify(info));
         })
         .catch((error) => {
           console.log(error);
         });
     }
+    // eslint-disable-next-line
   }, []);
 
   return (

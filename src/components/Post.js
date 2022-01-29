@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Post.css";
-import post from "../img/post.jpg";
+// import post from "../img/post.jpg";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
@@ -17,7 +17,7 @@ function Post(props) {
         </div>
       </div>
       <div>
-        <img id="postimage" src={post} alt="" />
+        <img id="postimage" src={props.image} alt="" />
       </div>
       <div className="buttons">
         <div>
@@ -29,7 +29,7 @@ function Post(props) {
           <BookmarkBorderOutlinedIcon className="button save" />
         </div>
       </div>
-      <div className="caption">caption</div>
+      <div className="caption">{props.caption}</div>
       <div className="comments">
         <div>
           <b>username</b> comment
