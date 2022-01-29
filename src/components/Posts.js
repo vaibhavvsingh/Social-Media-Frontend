@@ -16,7 +16,7 @@ function Posts() {
     axios.defaults.headers.common["Accept"] = "*/*";
     axios({
       method: "POST",
-      url: `http://localhost:5000/user/posts`,
+      url: `https://imagepost-backend.herokuapp.com/user/posts`,
       data: {
         username: user.username,
         password: user.password,
@@ -27,11 +27,11 @@ function Posts() {
         allposts = res.data;
         allposts.reverse();
         setPostsResponse(allposts);
-        console.log(allposts);
-        console.log(user);
+        // console.log(allposts);
+        // console.log(user);
       })
       .catch((err) => {
-        console.log(user);
+        // console.log(user);
         console.log(err);
       });
     // eslint-disable-next-line
